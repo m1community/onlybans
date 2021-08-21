@@ -11,7 +11,7 @@
   },
   "scripts": {
     "build": "npm install",
-    "start": "node main.js",
+    "start": "node index.js",
     "test": "jest ."
   }
 }
