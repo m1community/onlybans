@@ -14,7 +14,7 @@
     "prettier": "^2.3.2"
   },
   "scripts": {
-    "build": "tsc --build",
+    "build": "return 1",
     "start": "ts-node-dev --transpile-only --watch -- ./src/index.ts",
     "test": "jest ."
   },
