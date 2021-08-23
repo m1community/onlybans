@@ -1,15 +1,15 @@
-const fetch = require("node-fetch");
+const axios = require('axios');
 
 it("Works", async () => {
   let username = "Hello";
 
-  let req = await fetch("http://localhost:3000/ban/" + username);
+  const data = await axios.get(`http://localhost:${process.env.PORT || 3000}/banned/${username}`);
 
-  expect(await req.text()).toBe(`${username} has been banned!`);
+  expect(data.status).toBe(403);
 });
 
 it("Works but 2", async () => {
-  let req = await fetch("http://localhost:3000/ban/");
+  let req = await axios.get("http://localhost:3000/ban/");
 
   expect(req.ok).toBeFalsy();
 });
