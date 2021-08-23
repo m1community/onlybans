@@ -20,7 +20,7 @@ app.get("/ban/:person", (_req: Request, res: Response) => {
 });
 
 app.get("/", (_req: Request, res: Response) => {
-  res.redirect("/banned");
+  res.redirect("/bans");
 });
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
